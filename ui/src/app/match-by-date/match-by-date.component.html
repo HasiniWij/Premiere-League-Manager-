@@ -1,0 +1,44 @@
+<h1>Search by Date</h1>
+<div id="searchArea">
+
+  <mat-label >Day: </mat-label>  <input  size="1"  matInput #day placeholder="DD" >
+  <mat-label >Month: </mat-label>  <input matInput size="1"  #month placeholder="MM">
+  <mat-label >Year: </mat-label>   <input matInput size="3" #year placeholder="YYYY">
+
+  <button mat-raised-button (click)="validation(day.value,month.value,year.value)">Search</button>
+
+  <p>{{message}}</p>
+</div>
+
+<div *ngIf=isSearched>
+  <mat-table [dataSource]="dataSource">
+
+    <ng-container matColumnDef="date">
+      <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+      <mat-cell *matCellDef="let user"> {{user.date}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="clubA">
+      <mat-header-cell *matHeaderCellDef> Club  </mat-header-cell>
+      <mat-cell *matCellDef="let user"> {{user.clubA.name}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="clubB">
+      <mat-header-cell *matHeaderCellDef> Club  </mat-header-cell>
+      <mat-cell *matCellDef="let user"> {{user.clubB.name}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="clubAGoal">
+      <mat-header-cell *matHeaderCellDef> Goal </mat-header-cell>
+      <mat-cell *matCellDef="let user"> {{user.clubAGoal}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="clubBGoal">
+      <mat-header-cell *matHeaderCellDef> Goal </mat-header-cell>
+        <mat-cell *matCellDef="let user"> {{user.clubBGoal}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+  </mat-table>
+</div>

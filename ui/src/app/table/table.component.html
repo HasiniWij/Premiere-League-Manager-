@@ -1,0 +1,71 @@
+<h1>Premier League Table</h1>
+<button mat-button id="left-button" (click)="point()"  >Sort by points </button>
+<button mat-button (click)="goal()">Sort by goals</button>
+<button mat-button (click)="win()">Sort by Wins</button>
+
+<div>
+  <mat-table [dataSource]="dataSource">
+
+
+  <ng-container matColumnDef="position">
+    <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+    <mat-cell *matCellDef="let element; let i = index;"> {{i+1}} </mat-cell>
+  </ng-container>
+
+
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef> Club </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+  </ng-container>
+
+
+  <ng-container matColumnDef="numOfMatchesPlayed">
+    <mat-header-cell *matHeaderCellDef> Played </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.numOfMatchesPlayed}} </mat-cell>
+  </ng-container>
+
+
+  <ng-container matColumnDef="numOfWins">
+    <mat-header-cell *matHeaderCellDef> Won </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.numOfWins}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="numOfDraws">
+    <mat-header-cell *matHeaderCellDef> Drawn </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.numOfDraws}} </mat-cell>
+  </ng-container>
+
+
+  <ng-container matColumnDef="numOfDefeats">
+    <mat-header-cell *matHeaderCellDef> Lost </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.numOfDefeats}} </mat-cell>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="numGoalsFor">
+    <mat-header-cell *matHeaderCellDef> GF </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.numGoalsFor}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="numGoalsAgainst">
+    <mat-header-cell *matHeaderCellDef> GA </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.numGoalsAgainst}} </mat-cell>
+  </ng-container>
+
+    <ng-container matColumnDef="goalDifference">
+      <mat-header-cell *matHeaderCellDef> GD </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.goalDifference}} </mat-cell>
+    </ng-container>
+
+      <ng-container matColumnDef="numOfPoints">
+        <mat-header-cell *matHeaderCellDef> Points </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.numOfPoints}} </mat-cell>
+      </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns; let i = position;"></mat-row>
+
+  </mat-table>
+</div>
+
+

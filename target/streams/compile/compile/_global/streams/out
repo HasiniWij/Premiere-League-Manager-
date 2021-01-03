@@ -1,0 +1,34 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Users\User\Music\OOPCW-master\app\ConsoleApplication\PremierLeagueManager.java:10:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0mpublic class PremierLeagueManager implements LeagueManager, Serializable {[0m
+[0m[[0m[31merror[0m] [0m[0m                                             ^  symbol: class LeagueManager[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\User\Music\OOPCW-master\app\ConsoleApplication\PremierLeagueManager.java:15:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m    private List<Match> matches=new ArrayList<>();[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^  symbol:   class Match[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class PremierLeagueManager[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\User\Music\OOPCW-master\app\ConsoleApplication\PremierLeagueManager.java:133:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m    public List<FootballClub> displayLeagueTable() {[0m
+[0m[[0m[31merror[0m] [0m[0m                ^  symbol:   class FootballClub[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class PremierLeagueManager[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\User\Music\OOPCW-master\app\ConsoleApplication\PremierLeagueManager.java:34:1:  error: method does not override or implement a method from a supertype[0m
+[0m[[0m[31merror[0m] [0m[0m    @Override[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\User\Music\OOPCW-master\app\ConsoleApplication\PremierLeagueManager.java:43:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m        for (FootballClub club : premierClubs){[0m
+[0m[[0m[31merror[0m] [0m[0m             ^  symbol:   class FootballClub[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class PremierLeagueManager[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\User\Music\OOPCW-master\app\ConsoleApplication\PremierLeagueManager.java:48:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m        premierClubs.add(new FootballClub(name.toLowerCase(),location.toLowerCase()));[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^  symbol:   class FootballClub[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class PremierLeagueManager[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\User\Music\OOPCW-master\app\ConsoleApplication\PremierLeagueManager.java:73:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m        FootballClub clubA = null;[0m
+[0m[[0m[31merror[0m] [0m[0m        ^  symbol:   class FootballClub[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class PremierLeagueManager[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\User\Music\OOPCW-master\app\ConsoleApplication\PremierLeagueManager.java:112:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m            Match match=new Match(clubA,clubB,clubAGoal,clubBGoal,date);[0m
+[0m[[0m[31merror[0m] [0m[0m            ^  symbol:   class Match[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class PremierLeagueManager[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\User\Music\OOPCW-master\app\ConsoleApplication\PremierLeagueManager.java:112:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m            Match match=new Match(clubA,clubB,clubAGoal,clubBGoal,date);[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^  symbol:   class Match[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class PremierLeagueManager[0m

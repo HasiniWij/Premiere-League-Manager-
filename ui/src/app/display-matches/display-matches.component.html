@@ -1,0 +1,33 @@
+<h1>Matches played</h1>
+<div>
+  <mat-table [dataSource]="dataSource">
+
+    <ng-container matColumnDef="date">
+      <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+      <mat-cell *matCellDef="let user"> {{user.date}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="clubA">
+      <mat-header-cell *matHeaderCellDef> Club  </mat-header-cell>
+      <mat-cell *matCellDef="let user"> {{user.clubA.name}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="clubB">
+      <mat-header-cell *matHeaderCellDef> Club  </mat-header-cell>
+      <mat-cell *matCellDef="let user"> {{user.clubB.name}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="clubAGoal">
+      <mat-header-cell *matHeaderCellDef> Goal </mat-header-cell>
+      <mat-cell *matCellDef="let user"> {{user.clubAGoal}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="clubBGoal">
+      <mat-header-cell *matHeaderCellDef> Goal </mat-header-cell>
+      <mat-cell *matCellDef="let user"> {{user.clubBGoal}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+  </mat-table>
+</div>
